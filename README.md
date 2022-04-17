@@ -17,12 +17,16 @@ The following is a list of short, simple issues that can be fixed but I can't
 put the time into them immediately.
 
 -   Fix the clipping issue on the end of notes - The final sine wave of a note
-    should be tapered down or dampened such that this clipping does not occur.
+    should be tapered down or dampened such that this clipping does not occur
 -   Add the ability to expand notes to multiple "beats" without any gaps
 -   Add the ability to combine songs together as song fragments, which should
     allow for songs to be made up of other groupings of songs. This allows for
-    time signatures to be mixed, songs to speed up and slow down, etc.
+    time signatures to be mixed, songs to speed up and slow down, etc
+-   Add the capability to make chords
 -   Create a simple UI that allows for song generation
+-   Optimize code. There's many points for optimization - A lot of the tones
+    are generated on runtime instead of being switched to usage, and this
+    could optimize the song generation time significantly for longer songs
 
 # License TL;DR
 
