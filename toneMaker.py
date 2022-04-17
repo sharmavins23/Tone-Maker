@@ -47,6 +47,26 @@ def createFireflies():
     return song
 
 
+# Create mario game-over jingle as a song
+def createMarioGameOverJingle():
+    title = "Mario_GameOverJingle"
+
+    # Create the song's score
+    score = " 0 0 "
+    score += " F#5 F#5 0 F#5 0 D5 F#5 0 A6 0 0 0 A5 0 0 0 "
+    score += " D5 0 0 A5 0 0 F#4 0 B5 C#5 B5 A#5 C5 A#5 A5 E4 F#4 F#4 F#4 F#4 "
+
+    song = Song(
+        title=title,
+        bpm=360,
+        score=score,
+        sampleRate=44100,
+        encodingType=np.int16
+    )
+
+    return song
+
+
 # Write a waveform of a song object to a file
 def writeSongToFile(song: Song):
     outFilename = "out/" + song.title + ".mp3"
@@ -70,3 +90,6 @@ if __name__ == "__main__":
 
     fireflies = createFireflies()
     writeSongToFile(fireflies)
+
+    gameOverJingle = createMarioGameOverJingle()
+    writeSongToFile(gameOverJingle)
