@@ -38,7 +38,7 @@ def createFireflies():
 
     song = Song(
         title=title,
-        bpm=300,
+        bpm=450,
         score=score,
         sampleRate=44100,
         encodingType=np.int16
