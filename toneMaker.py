@@ -67,6 +67,39 @@ def createMarioGameOverJingle():
     return song
 
 
+def createE1M1():
+    title = "E1M1"
+
+    # Create the song's score
+    score = " 0 0 "
+    score += " E2 E2 E3 E2 E2 D3 E2 E2 C3 E2 E2 A#3 E2 E2 B3 C3 "
+    score += " E2 E2 E3 E2 E2 D3 E2 E2 C3 E2 E2 A#3 A#3 A#3 A#3 A#3 "
+    score += " E2 E2 E3 E2 E2 D3 E2 E2 C3 E2 E2 A#3 E2 E2 B3 C3 "
+    score += " E2 E2 E3 E2 E2 D3 E2 E2 C3 E2 E2 A#3 A#3 A#3 A#3 A#3 "
+    score += " A3 A3 A4 A3 A3 G3 A3 A3 F3 A3 A3 D#3 A3 A3 E3 F3 "
+    score += " A3 A3 A4 A3 A3 G3 A3 A3 F3 A3 A3 D#3 D#3 D#3 D#3 D#3 "
+    score += " A3 A3 A4 A3 A3 G3 A3 A3 F3 A3 A3 D#3 A3 A3 E3 F3 "
+    score += " A3 A3 A4 A3 A3 G3 A3 A3 F3 A3 A3 D#3 D#3 D#3 D#3 D#3 "
+    score += " E2 E2 E3 E2 E2 D3 E2 E2 C3 E2 E2 A#3 E2 E2 B3 C3 "
+    score += " E2 E2 E3 E2 E2 D3 E2 E2 C3 E2 E2 A#3 A#3 A#3 A#3 A#3 "
+    score += " E2 E2 E3 E2 E2 D3 E2 E2 C3 E2 E2 A#3 E2 E2 B3 C3 "
+    score += " E2 E2 E3 E2 E2 D3 E2 E2 C3 E2 E2 A#3 A#3 A#3 A#3 A#3 "
+    score += " C#3 C#3 C#4 C#3 C#3 B4 C#3 C#3 A4 C#3 C#3 G3 C#3 C#3 G#3 A4 "
+    score += " B3 B3 B4 B3 B3 A4 B3 B3 G3 A3 A3 F3 F3 F3 F3 F3 "
+    score += " E2 E2 E3 E2 E2 D3 E2 E2 C3 E2 E2 A#3 E2 E2 B3 C3 "
+    score += " E2 E2 E3 E2 E2 D3 E2 E2 C3 E2 E2 A#3 A#3 A#3 A#3 A#3 "
+
+    song = Song(
+        title=title,
+        bpm=400,
+        score=score,
+        sampleRate=44100,
+        encodingType=np.int16
+    )
+
+    return song
+
+
 # Write a waveform of a song object to a file
 def writeSongToFile(song: Song):
     outFilename = "out/" + song.title + ".mp3"
@@ -93,3 +126,6 @@ if __name__ == "__main__":
 
     gameOverJingle = createMarioGameOverJingle()
     writeSongToFile(gameOverJingle)
+
+    E1M1 = createE1M1()
+    writeSongToFile(E1M1)
